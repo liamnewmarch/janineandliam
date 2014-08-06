@@ -1,7 +1,7 @@
 # Site settings
 title: Janine & Liam
 description: "Janine & Liam"
-baseurl: "http://janineandliam.com"
+baseurl: ""
 url: "http://janineandliam.com"
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -11,4 +11,7 @@ markdown: kramdown
 permalink: pretty
 
 # Ignore
-exclude: CNAME, node_modules, package.json
+exclude:
+- CNAME
+- node_modules
+- package.json
