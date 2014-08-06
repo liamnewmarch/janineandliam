@@ -1,0 +1,14 @@
+# Site settings
+title: Janine & Liam
+description: "Janine & Liam"
+baseurl: "http://janineandliam.com"
+url: "http://janineandliam.com"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Ignore
+exclude: CNAME, node_modules, package.json
