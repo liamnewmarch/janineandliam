@@ -40,21 +40,6 @@ module.exports = function(grunt) {
 			compile: {
 				 src: 'dist/assets/css/*.css'
 			}
-		},
-
-		rsync: {
-			options: {
-				args: [ '-avz' ],
-				recursive: true
-			},
-			push: {
-				options: {
-					src: 'dist/',
-					dest: 'sites/janineandliam.com/',
-					host: 'astra',
-					syncDestIgnoreExcl: true
-				}
-			}
 		}
 	});
 
@@ -62,7 +47,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-rsync');
 
 	grunt.registerTask('default', [
 		// Pre clean up
@@ -73,9 +57,5 @@ module.exports = function(grunt) {
 		'sass:compile', 'autoprefixer:compile',
 		// Post clean up
 		'clean:post'
-	]);
-
-	grunt.registerTask('push', [
-		'rsync:push'
 	]);
 };
