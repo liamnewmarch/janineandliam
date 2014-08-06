@@ -4,12 +4,11 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		clean: {
-			pre: [ 'dist/', 'temp/' ],
-			post: [ 'temp/' ]
+			main: [ 'dist/' ]
 		},
 
 		copy: {
-			html: {
+			main: {
 				files: [{
 					expand: true,
 					flatten: true,
@@ -21,24 +20,19 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
-			compile: {
+			main: {
 				options: {
 					style: 'compressed'
 				},
-				files: [{
-					expand: true,
-					flatten: true,
-					cwd: 'src/assets/css/',
-					src: [ '*.scss', '*.sass' ],
-					dest: 'dist/assets/css/',
-					ext: '.css'
-				}]
+				files: {
+					'dist/assets/css/main.css': 'src/assets/css/main.scss'
+				}
 			}
 		},
 
 		autoprefixer: {
-			compile: {
-				 src: 'dist/assets/css/*.css'
+			main: {
+				 src: 'dist/assets/css/main.css'
 			}
 		}
 	});
@@ -49,13 +43,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 
 	grunt.registerTask('default', [
-		// Pre clean up
-		'clean:pre',
-		// HTML
-		'copy:html',
-		// CSS
-		'sass:compile', 'autoprefixer:compile',
-		// Post clean up
-		'clean:post'
+		'clean', 'copy', 'sass', 'autoprefixer'
 	]);
 };
