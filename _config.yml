@@ -13,5 +13,7 @@ permalink: pretty
 # Ignore
 exclude:
 - CNAME
+- Gruntfile.js
+- README.md
 - node_modules
 - package.json

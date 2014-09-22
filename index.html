@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" onclick="this.className='scrolled'">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<title>♥ Janine and Liam ♥</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Petit+Formal+Script">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<!--[if lt IE 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<![endif]-->
 	</head>
 	<body>
-		<header>
-			<p>By air mail</p>
-			<p>Par avion</p>
-		</header>
 		<main>
-			<h1>Happy Valentine’s <br />Day Janine</h1>
-			<p>I love you more <br />than anything!</p>
-			<p>(and yes, I got you <br />a real card too)</p>
-			<p>xxxxxx</p>
+			<section class="reveal">
+				<p class="reveal__text">She said <span class="reveal__yes">yes!</span></p>
+			</section>
+			<section class="about">
+				<div class="about__text">
+					<p>I am delighted to announce that Janine and I are engaged to be married!</p>
+					<p>While we have yet to begin preparations for our wedding, I hope you’ll join us in celebrating this moment in our lives. Wherever you are right now, please raise your nearest glass, cup, mug or tankard to my fiancé; the beautiful Miss Janine Lambert (who made the right choice!)</p>
+				</div>
+				<div class="about__comments">
+					<div id="disqus_thread">
+						<noscript>Please enable JavaScript to view and leave comments (sorry!)</noscript>
+					</div>
+				</div>
+			</section>
 		</main>
+		<script> window.disqus_shortname = 'janineandliam'; </script>
+		<script async src="//janineandliam.disqus.com/embed.js"></script>
 	</body>
 </html>
