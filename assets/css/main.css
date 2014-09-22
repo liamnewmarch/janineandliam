@@ -1,2 +1,66 @@
-*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font:16px Helvetica Neue,sans-serif;text-rendering:optimizeLegibility;color:#404040;overflow:hidden}body{margin:0}section{position:absolute;top:0;left:0;width:100vw;height:100vh;overflow:auto}.reveal{background:fixed silver}.about{background:#fff;-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%);transform:translate3d(0, 100%, 0);-webkit-transition:-webkit-transform 0.2s ease;transition:transform 0.2s ease}html.scrolled .about{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);transform:translate3d(0, 0, 0)}.about::before{content:'➵';left:0;bottom:16px;width:100%;color:#fff;font-size:80px;text-align:center;-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg);-webkit-transition:-webkit-transform 0.2s ease, color 0.2s linear;transition:transform 0.2s ease, color 0.2s linear;cursor:pointer}.about__text{float:right;height:0;margin-right:50%;max-width:200px}.about__comments{float:left;height:0;margin-left:50%;max-width:200px}
+* {
+  box-sizing: border-box; }
+
+html {
+  font: 16px Helvetica Neue, sans-serif;
+  text-rendering: optimizeLegibility;
+  color: #404040; }
+
+body {
+  margin: 0; }
+
+section {
+  width: 100vw;
+  height: 100vh; }
+
+.reveal {
+  background: fixed black;
+  background: fixed url("http://lh4.googleusercontent.com/-WKmRU-FgRSk/UUBiBd1FGFI/AAAAAAAAHGg/ffNsLBJNCV8/s2560/IMG_20120715_150549.jpg") 50% 50%/cover no-repeat; }
+
+.reveal__text {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  margin: 0;
+  font-size: 80px;
+  font-weight: 200;
+  line-height: 1;
+  text-align: right;
+  color: white;
+  text-shadow: 0 0 10px black; }
+  .reveal__text span {
+    display: block;
+    font-size: 136px;
+    text-transform: uppercase; }
+
+.about {
+  position: relative;
+  z-index: 2;
+  background: white; }
+
+.about__arrow {
+  position: absolute;
+  left: 0;
+  top: -112px;
+  width: 100%;
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px black;
+  transform: rotate(90deg) translateX(-16px);
+  transition: transform 0.2s ease, color 0.2s linear;
+  cursor: pointer; }
+
+.about__text,
+.about__comments {
+  float: left;
+  width: 50%;
+  padding: 32px; }
+
+.about__text {
+  font-size: 24px;
+  font-weight: 300; }
+  .about__text p:first-child {
+    margin-top: 2px; }
+
 /*# sourceMappingURL=main.css.map */
