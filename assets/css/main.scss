@@ -5,10 +5,10 @@
 
 $unit: 16px;
 
-$color-dark: rgb(64, 64, 64);
-$color-light: rgb(255, 255, 255);
+$color-off-black: rgb(64, 64, 64);
+$color-white: rgb(255, 255, 255);
 
-$image-background: 'https://lh6.googleusercontent.com/-RSzZK43eJio/VBLGCvIa01I/AAAAAAAAIfY/m4w4Om0zHW4/w891-h659-no/IMG_20140912_105346.jpg';
+$image-background: 'http://lh4.googleusercontent.com/-WKmRU-FgRSk/UUBiBd1FGFI/AAAAAAAAHGg/ffNsLBJNCV8/s2560/IMG_20120715_150549.jpg';
 
 
 // ---- GLOBAL STYLES ----------------------------------------------------------
@@ -21,8 +21,7 @@ $image-background: 'https://lh6.googleusercontent.com/-RSzZK43eJio/VBLGCvIa01I/A
 html {
 	font: $unit Helvetica Neue, sans-serif;
 	text-rendering: optimizeLegibility;
-	color: $color-dark;
-	overflow: hidden;
+	color: $color-off-black;
 }
 
 body {
@@ -30,58 +29,66 @@ body {
 }
 
 section {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100vw;
 	height: 100vh;
-	overflow: auto;
 }
 
 .reveal {
-	// background: fixed url($image-background) 50% 50% / cover no-repeat;
-	background: fixed silver;
+	background: fixed black;
+	background: fixed url($image-background) 50% 50% / cover no-repeat;
 }
 
 .reveal__text {
+	position: fixed;
+	right: $unit * 2;
+	bottom: $unit * 2;
+	margin: 0;
+	font-size: $unit * 5;
+	font-weight: 200;
+	line-height: 1;
+	text-align: right;
+	color: $color-white;
+	text-shadow: 0 0 10px black;
 
+	span {
+		display: block;
+		font-size: $unit * 8.5;
+		text-transform: uppercase;
+	}
 }
 
 .about {
-	background: $color-light;
-	transform: translateY(100%);
-	transform: translate3d(0, 100%, 0);
-	transition: transform 0.2s ease;
+	position: relative;
+	z-index: 2;
+	background: $color-white;
+}
 
-	html.scrolled & {
-		transform: translateY(0);
-		transform: translate3d(0, 0, 0);
-	}
+.about__arrow {
+	position: absolute;
+	left: 0;
+	top: - $unit * 7;
+	width: 100%;
+	font-size: $unit * 5;
+	text-align: center;
+	color: $color-white;
+	text-shadow: 0 0 10px black;
+	transform: rotate(90deg) translateX(-$unit);
+	transition: transform 0.2s ease, color 0.2s linear;
+	cursor: pointer;
+}
 
-	&::before {
-		content: '➵';
-		left: 0;
-		bottom: $unit;
-		width: 100%;
-		color: $color-light;
-		font-size: $unit * 5;
-		text-align: center;
-		transform: rotate(90deg);
-		transition: transform 0.2s ease, color 0.2s linear;
-		cursor: pointer;
-	}
+.about__text,
+.about__comments {
+	float: left;
+	width: 50%;
+	padding: $unit  * 2;
 }
 
 .about__text {
-	float: right;
-	height: 0;
-	margin-right: 50%;
-	max-width: 200px;
-}
+	font-size: $unit * 1.5;
+	font-weight: 300;
 
-.about__comments {
-	float: left;
-	height: 0;
-	margin-left: 50%;
-	max-width: 200px;
+	p:first-child {
+		margin-top: 2px;
+	}
 }
