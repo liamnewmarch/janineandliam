@@ -11,7 +11,7 @@ body {
 
 section {
   width: 100vw;
-  height: 100vh; }
+  min-height: 100vh; }
 
 .reveal {
   background: fixed black;
@@ -20,18 +20,23 @@ section {
 .reveal__text {
   position: fixed;
   right: 32px;
-  bottom: 32px;
+  top: 32px;
   margin: 0;
   font-size: 80px;
   font-weight: 200;
   line-height: 1;
   text-align: right;
   color: white;
-  text-shadow: 0 0 10px black; }
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
   .reveal__text span {
     display: block;
     font-size: 136px;
     text-transform: uppercase; }
+  @media (max-width: 600px) {
+    .reveal__text {
+      font-size: 40px; }
+      .reveal__text span {
+        font-size: 68.8px; } }
 
 .about {
   position: relative;
@@ -46,7 +51,7 @@ section {
   font-size: 80px;
   text-align: center;
   color: white;
-  text-shadow: 0 0 10px black;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   transform: rotate(90deg) translateX(-16px);
   transition: transform 0.2s ease, color 0.2s linear;
   cursor: pointer; }
@@ -56,11 +61,19 @@ section {
   float: left;
   width: 50%;
   padding: 32px; }
+  @media (max-width: 600px) {
+    .about__text,
+    .about__comments {
+      width: 100%;
+      float: none; } }
 
 .about__text {
   font-size: 24px;
   font-weight: 300; }
   .about__text p:first-child {
     margin-top: 2px; }
+  @media (max-width: 600px) {
+    .about__text {
+      font-size: 19.2px; } }
 
 /*# sourceMappingURL=main.css.map */
