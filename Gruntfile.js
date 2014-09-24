@@ -18,10 +18,18 @@ module.exports = function(grunt) {
 			main: {
 				 src: 'assets/css/main.css'
 			}
+		},
+
+		watch: {
+			jekyll: {
+				files: [ '**' ],
+				tasks: [ 'sass', 'autoprefixer' ]
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 
 	grunt.registerTask('default', [
