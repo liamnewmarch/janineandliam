@@ -1,4 +1,4 @@
 # Janine & Liam
 
-A site for me and my girlfriend. Yeah, I’m a romantic.
+A page on the net for announcements and the like. Nothing to see here really.
 
