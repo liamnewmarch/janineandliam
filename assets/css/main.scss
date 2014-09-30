@@ -100,7 +100,7 @@ section {
 	padding: $unit  * 2;
 
 	@include mobile {
-		width: 100%;
+		width: auto;
 		float: none;
 	}
 }
