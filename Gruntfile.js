@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			jekyll: {
-				files: [ '**' ],
+				files: [ 'assets/css/*.scss' ],
 				tasks: [ 'sass', 'autoprefixer' ]
 			}
 		}
