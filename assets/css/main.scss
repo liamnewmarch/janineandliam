@@ -38,39 +38,12 @@ body {
 
 section {
 	width: 100vw;
-	min-height: 100vh;
+	min-height: 95vh;
 }
 
 .reveal {
-	background: fixed black;
+	background: black;
 	background: fixed url($image-background) 50% 50% / cover no-repeat;
-}
-
-.reveal__text {
-	position: fixed;
-	right: $unit * 2;
-	top: $unit * 2;
-	margin: 0;
-	font-size: $unit * 5;
-	font-weight: 200;
-	line-height: 1;
-	text-align: right;
-	color: $color-white;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-
-	span {
-		display: block;
-		font-size: $unit * 8.5;
-		text-transform: uppercase;
-	}
-
-	@include mobile {
-		font-size: $unit * 2.5;
-
-		span {
-			font-size: $unit * 4.3;
-		}
-	}
 }
 
 .about {
