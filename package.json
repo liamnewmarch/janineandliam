@@ -1,28 +1,17 @@
 {
   "name": "janineandliam.com",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Janine & Liam",
-  "main": "Gruntfile.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/liamnewmarch/janineandliam.com.git"
   },
-  "license": "GPL",
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-autoprefixer": "^0.6.5",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-sass": "^0.7.4",
-    "grunt-contrib-uglify": "^0.3.3",
-    "grunt-contrib-watch": "^0.6.1"
-  },
+  "license": "UNLICENCED",
   "bugs": {
     "url": "https://github.com/liamnewmarch/janineandliam.com/issues"
   },
   "homepage": "https://github.com/liamnewmarch/janineandliam.com",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Liam Newmarch"
+    "start": "python -m SimpleHTTPServer 4000"
+  }
 }
