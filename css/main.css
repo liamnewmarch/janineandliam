@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+html {
+  background-color: #fff;
+  box-sizing: border-box;
+  color: #333;
+  font: 300 32px Helvetica Neue, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem;
+  min-height: 100vh;
+  text-align: center;
+}
