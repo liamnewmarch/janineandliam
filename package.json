@@ -1,16 +1,16 @@
 {
-  "name": "janineandliam.com",
+  "name": "janineandliam.co.uk",
   "version": "3.0.0",
   "description": "Janine & Liam",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liamnewmarch/janineandliam.com.git"
+    "url": "https://github.com/liamnewmarch/janineandliam.co.uk.git"
   },
   "license": "UNLICENCED",
   "bugs": {
-    "url": "https://github.com/liamnewmarch/janineandliam.com/issues"
+    "url": "https://github.com/liamnewmarch/janineandliam.co.uk/issues"
   },
-  "homepage": "https://github.com/liamnewmarch/janineandliam.com",
+  "homepage": "https://github.com/liamnewmarch/janineandliam.co.uk",
   "scripts": {
     "start": "python -m SimpleHTTPServer 4000"
   }
