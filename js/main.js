@@ -1,12 +1,38 @@
-const card = document.querySelector('.card');
-const instruction = document.querySelector('.instruction');
+class DaysAgo extends HTMLElement {
+  static get is() {
+    return 'days-ago';
+  }
 
-function toggle(event) {
-  event.preventDefault();
-  instruction.classList.add('touched');
-  card.classList.toggle('open');
+  static get observedAttributes() {
+    return ['since'];
+  }
+
+  get days() {
+    const today = new Date();
+    const since = new Date(this.since)
+    return Math.floor((today - since) / 864e5);
+  }
+
+  get since() {
+    return this.getAttribute('since');
+  }
+
+  set since(value) {
+    this.setAttribute('since', value);
+  }
+
+  constructor(...args) {
+    super(...args);
+    this.attachShadow({ mode: 'open' });
+  }
+
+  attributeChangedCallback(key, _, value) {
+    if (key === 'since') {
+      this.shadowRoot.textContent = this.days;
+    }
+  }
 }
 
-window.addEventListener('click', toggle);
-window.addEventListener('touchstart', toggle);
-
+if ('customElements' in window) {
+  customElements.define(DaysAgo.is, DaysAgo);
+}
