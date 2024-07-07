@@ -4,7 +4,7 @@ html {
   background-color: #fff;
   box-sizing: border-box;
   color: #333;
-  font: 300 32px Helvetica Neue, sans-serif;
+  font: 300 32px system-ui, sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -15,9 +15,7 @@ html {
 }
 
 body {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  align-content: center;
   margin: 0 1rem;
   min-height: 100vh;
   text-align: center;
